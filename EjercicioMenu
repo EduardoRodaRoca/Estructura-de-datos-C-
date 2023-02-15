@@ -1,0 +1,84 @@
+
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include "stdlib.h"
+#include "cmath"
+using namespace std;
+
+void circulo();
+void multiplos();
+bool edad();
+
+void main()
+{
+    int opcion;
+        do {
+            
+            cout << "***MENU***" << endl;
+            cout << "==========" << endl << endl;
+            cout << "1. Calcular el area de un circulo" << endl;
+            cout << "2. Sacar multiplos de un numero " << endl;
+            cout << "3. Determinar si el usuario es mayor de edad" << endl;
+            cout << "Ingrese la opcion: ";
+            cin >> opcion;
+            switch (opcion) {
+            case 1: circulo();
+                break;
+              case 2: multiplos();
+                break;
+              case 3: if (edad())
+                  cout << "El usuario es mayor de edad" << endl;
+                    else
+                  cout << "El usuario no es mayor de edad " << endl;
+                break;
+  
+            case 0: cout << "Salir";
+                break;
+
+            default: cout << "Opcion Invalida"<< endl;
+                break;
+            }
+          
+
+       
+        
+        } while (opcion != 0);
+}
+
+void circulo() {
+    double a, b;
+    cout << "Ingrese el radio del circulo " << endl;
+    cin >> a;
+    b = M_PI * pow(a, 2);
+    cout << "El area del circulo es: " << b;
+}
+
+bool edad() {
+    int edad;
+    cout << "Ingrese su edad" << endl;
+    cin >> edad;
+
+    if (edad >= 18) {
+        return true;
+
+    }
+    else {
+        return false;
+
+    }
+}
+    void multiplos() {
+        int a, b;
+        cout << "Ingrese el numero" << endl;
+        cin >> a;
+        cout << "Ingrese la cantidad de multiplos que desea" << endl;
+        cin >> b;
+
+        for (int i = a; i <= (a * b); i+=a) {
+            cout << "i" << ", ";
+        }
+}
+
+
+
+
