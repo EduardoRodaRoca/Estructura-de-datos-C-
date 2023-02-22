@@ -1,0 +1,33 @@
+
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n);
+
+int main( void ){
+    system("color 0a");
+    int nro;
+    cout<<"\n\t\t[     RECURSIVIDAD     ]\n";
+    cout<<"\t\t————————\n\n";
+    cout<<" EJERCICIO 2: Convertir a binario un numero decimal "<<endl<<endl;
+    do{
+        cout<<" INGRESE NUMERO: ";
+        cin>>nro;
+        if(nro<0) cout<<"\nINGRESE UN NUMERO ENTERO Y POSITIVO… \n";
+    }while(nro<0);
+    cout<<endl;
+    cout<<"\n Numero:"<<nro<<endl;
+    cout<<"\n Factorial: ";
+    cout << factorial(nro);
+    return 0;
+}
+int factorial (int n)
+{
+    if (n==0){
+        return 1;
+    }
+    else
+        return n* factorial(n-1);
+
+}
