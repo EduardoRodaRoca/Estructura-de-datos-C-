@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+#define fil 20
+#define col 20
+int fila, columna;
+void mostrarMatriz(double mat[fil][col]);
+void cargarMatriz(double mat[fil][col]);
+void sacarTranspuesta(double mat[fil][col], double mat2[fil][col]);
+
+int main()
+{	
+	double mat[fil][col];double mat2[fil][col];
+	cout << "Ingrese la cantidad de filas de la matriz " << endl;
+	cin >> fila;
+	cout << "Ingrese la cantidad de columnas de la matriz " << endl;
+	cin >> columna;
+	cargarMatriz(mat);
+	sacarTranspuesta(mat, mat2);
+	mostrarMatriz(mat);
+	mostrarMatriz(mat2);
+
+	
+		
+}
+
+void cargarMatriz(double mat[fil][col]) {
+	for (int i = 0; i < fila; i++) {
+		for (int j = 0; j < columna; j++) {
+			cout << "Mat [" << i << "] [" << j << "]";
+			cin >> mat[i][j];
+		}
+	
+	}
+}
+
+void sacarTranspuesta(double mat[fil][col], double mat2[fil][col]) {
+	
+	for (int i = 0; i < fila; i++) {
+		for (int j = 0; j < columna; j++) {
+			mat2[j][i] = mat[i][j];
+		}
+
+	}
+
+
+
+}
+void mostrarMatriz(double mat[fil][col]) {
+
+	for (int i = 0; i < fila; i++) {
+		for (int j = 0; j < columna; j++) {
+			cout << mat[i][j];
+		}
+		cout << endl;
+	}
+
+
+}
