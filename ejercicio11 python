@@ -1,0 +1,8 @@
+cantidadAhorros=float(input("Introduce la cantidad de dinero depositado en la cuenta de ahorros: "))
+interes = 0.04
+ahorros_primer_anho = cantidadAhorros*(1+ interes)
+ahorros_segundo_anho = ahorros_primer_anho*(1+ interes)
+ahorros_tercer_anho = ahorros_segundo_anho*(1+ interes)
+print("Ahorros tras el primer año: {:.2f}".format(ahorros_primer_anio))
+print("Ahorros tras el segundo año: {:.2f}".format(ahorros_segundo_anio))
+print("Ahorros tras el tercer año: {:.2f}".format(ahorros_tercer_anio))
