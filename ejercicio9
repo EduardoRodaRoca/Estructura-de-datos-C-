@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string fecha;
+    int dia, mes, anio;
+    cout << "Ingrese su fecha de nacimiento en formato dd/mm/aaaa: ";
+    cin >> fecha;
+    if (fecha[1] == '/') {
+        dia = stoi(fecha.substr(0, 1));
+        mes = stoi(fecha.substr(2, 2));
+        anio = stoi(fecha.substr(5, 4));
+    } else if (fecha[2] == '/') {
+        dia = stoi(fecha.substr(0, 2));
+        mes = stoi(fecha.substr(3, 1));
+        anio = stoi(fecha.substr(5, 4));
+    } else {
+        dia = stoi(fecha.substr(0, 2));
+        mes = stoi(fecha.substr(3, 2));
+        anio = stoi(fecha.substr(6, 4));
+    }
+    cout << "Dia: " << dia << endl;
+    cout << "Mes: " << mes << endl;
+    cout << "Anio: " << anio << endl;
+
+    return 0;
+}
