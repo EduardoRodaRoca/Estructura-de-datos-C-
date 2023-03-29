@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void cambiarMayuscula(string nombre);
+void cambiarMinuscula(string nombre);
+void sacarPrimeraLetra (string nombre);
+
+int main() {
+    string nombre;
+    cout << "Ingrese su nombre completio"<< endl;
+    getline(cin , nombre);
+    cambiarMinuscula(nombre);
+    cambiarMayuscula(nombre);
+    sacarPrimeraLetra(nombre);
+
+    return 0;
+}
+
+void cambiarMayuscula(string nombre){
+    for (int i =0; i < nombre.length(); i++) {
+        cout << (char) toupper(nombre[i]);
+    }
+    cout << endl;
+}
+
+void cambiarMinuscula(string nombre){
+    for (int i =0; i < nombre.length(); i++) {
+        cout << (char) tolower(nombre[i]) ;
+    }
+    cout << endl;
+}
+
+void sacarPrimeraLetra (string nombre){
+    bool nuevaPalabra= true;
+
+    for (int i =0; i < nombre.length(); i++) {
+        if (nuevaPalabra) {
+            cout << (char) toupper(nombre[i]);
+            nuevaPalabra = false;
+
+        } else {
+            cout << (char) tolower(nombre[i]);
+        }
+        if (nombre[i] == ' '){
+
+            nuevaPalabra=true;
+
+        }
+    }
+
+
+}
