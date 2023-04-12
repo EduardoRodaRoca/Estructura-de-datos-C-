@@ -1,0 +1,8 @@
+import math
+x=input("Ingrese los elementos ede la lista separados por coma: ")
+elementos =[float(x) for x in x.split(",")]
+media =sum(elementos)/len(elementos)
+suma_diferencia_cuadrado= sum((x-media)**2 for x in elementos)
+desviacion= math.sqrt(suma_diferencia_cuadrado/len(elementos))
+print ("la media es: ", media)
+print ("La desviacion estandar es: ", desviacion)
