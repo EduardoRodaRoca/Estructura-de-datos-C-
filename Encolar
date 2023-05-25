@@ -1,0 +1,15 @@
+void Cola::Encolar(Dato elemento)
+  {
+        Nodo* newNodo = new Nodo (); // Crear un nuevo nodo. 
+        newNodo->dato = elemento; //Asigna un elemento al dato. 
+        newNodo->sig = NULL; //Asigna el valor NULL al nuevo Nodo. 
+
+        if (final == NULL) { // Si es igual NULL se queda ahí. Está vacía y es el único nodo.
+            frente = final = newNodo;
+        }
+            else {  // Se crea un ciclo. Se debe colocar al final de la cola. 
+                final->sig = newNodo;
+                final = newNodo;
+            }
+tamaño++; // Siga aumentando 
+}
